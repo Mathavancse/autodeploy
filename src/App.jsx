@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <h1>mathavan K</h1>        
+      <h1>Sridhar Raj</h1>        
     </>
   )
 }
