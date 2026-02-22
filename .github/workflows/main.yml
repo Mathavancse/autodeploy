@@ -31,8 +31,8 @@ jobs:
           username: ${{ secrets.LIGHTSAIL_USERNAME }}
           key: ${{ secrets.LIGHTSAIL_SSH_KEY }}
           script: |
-            sudo mkdir -p /var/www/final/frontend
-            sudo chown -R $USER:$USER /var/www/final/frontend
+            sudo mkdir -p /var/www/cicd/autodeploy
+            sudo chown -R $USER:$USER /var/www/cicd/autodeploy
 
       # Clean old dist
       - name: Clean old dist folder on Lightsail
