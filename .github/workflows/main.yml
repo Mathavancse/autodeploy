@@ -42,7 +42,7 @@ jobs:
           username: ${{ secrets.LIGHTSAIL_USERNAME }}
           key: ${{ secrets.LIGHTSAIL_SSH_KEY }}
           script: |
-            rm -rf /var/www/final/frontend/dist
+            rm -rf /var/www/cicd/autodeploy/dist
 
       # Copy new dist folder
       - name: Copy dist folder to Lightsail
@@ -52,7 +52,7 @@ jobs:
           username: ${{ secrets.LIGHTSAIL_USERNAME }}
           key: ${{ secrets.LIGHTSAIL_SSH_KEY }}
           source: "dist/"
-          target: "/var/www/final/frontend"
+          target: "/var/www/cicd/autodeploy"
 
       # Restart Nginx
       - name: Restart Nginx on Lightsail
